@@ -52,7 +52,7 @@ public class bbc_news_fragment extends Fragment implements Article_adapter.Artic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_business_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_base_fragment, container, false);
         progressBar = view.findViewById(R.id.progressBar);
         recyclerView = view.findViewById(R.id.recyclerview);
         linearLayoutManager = new LinearLayoutManager(getContext());

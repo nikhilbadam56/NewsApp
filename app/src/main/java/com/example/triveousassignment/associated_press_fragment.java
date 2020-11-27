@@ -55,7 +55,7 @@ public class associated_press_fragment extends Fragment implements Article_adapt
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_business_fragment, container, false);
+        View view = inflater.inflate(R.layout.fragment_base_fragment, container, false);
         progressBar = view.findViewById(R.id.progressBar);
         recyclerView = view.findViewById(R.id.recyclerview);
         linearLayoutManager = new LinearLayoutManager(getContext());

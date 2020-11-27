@@ -22,6 +22,9 @@ import java.util.List;
 
 public class Article_adapter extends RecyclerView.Adapter<Article_adapter.ArticleViewHolder>{
 
+
+
+    /* adapter for articles */
     List<Article> news;
     ArticleClickInterface context;
     Context  contexts;
@@ -31,6 +34,7 @@ public class Article_adapter extends RecyclerView.Adapter<Article_adapter.Articl
         this.context = context;
         this.contexts = contexts;
     }
+
     @NonNull
     @Override
     public ArticleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -51,6 +55,8 @@ public class Article_adapter extends RecyclerView.Adapter<Article_adapter.Articl
         return news.size();
     }
 
+    //interface to caputre the click event on the viewholder item inside the recyclerview and
+    //pass in the article data
     public interface ArticleClickInterface{
         public void onArticleItemClick(Article article);
     }
@@ -75,6 +81,8 @@ public class Article_adapter extends RecyclerView.Adapter<Article_adapter.Articl
         }
         public void bind(int position)
         {
+            //binding the data from the list of news objects to the respective views present in the
+            //current viewholder .
             article = news.get(position);
             source.setText(article.getSource());
             description.setText(article.getDescription());

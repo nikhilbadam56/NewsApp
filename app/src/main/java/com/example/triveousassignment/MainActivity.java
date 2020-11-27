@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     MaterialToolbar topappbar;
 
+    //fragment declarations
     nbc_news_fragment nbc_news_fragment;
     cnn_fragment cnn_fragment;
     google_news google_news;
@@ -48,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(topappbar);
 
-        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager); //tablyout for displaying the different news sources.
 
+        //viewpager adapter
         Viewpageradapter viewpageradapter = new Viewpageradapter(getSupportFragmentManager(),0);
         viewpageradapter.addfragment(nbc_news_fragment,"NBC");
         viewpageradapter.addfragment(cnn_fragment,"CNN");
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //viewpager adapter for loading in the respective fragment whenever there is a swipe left or right
     private class Viewpageradapter extends FragmentPagerAdapter{
 
 
