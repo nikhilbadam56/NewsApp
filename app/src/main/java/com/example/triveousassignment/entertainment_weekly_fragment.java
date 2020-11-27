@@ -61,8 +61,8 @@ public class entertainment_weekly_fragment extends Fragment implements Article_a
         linearLayoutManager = new LinearLayoutManager(getContext());
         swipeRefreshLayout = view.findViewById(R.id.swiperefresh);
         swipeRefreshLayout.setOnRefreshListener(this::onRefresh);
-        //crate an universal adapter that represent each view inside the recycler view
-        network_operation();
+        network_operation();// reusable function to fetching data from the internt and loading into
+        //adapter for updating recyclerview with view items.
         recyclerView.setLayoutManager(linearLayoutManager);
 
         return view;
