@@ -80,7 +80,7 @@ public class cnn_fragment extends Fragment implements Article_adapter.ArticleCli
     {
         Uri builturi = Uri.parse(BASE_URL).buildUpon()
                 .appendQueryParameter(SOURCES,"cnn")
-                .appendQueryParameter(APIKEY,"eac013040a57494aa0402871994154e9").build();
+                .appendQueryParameter(APIKEY,"ad8a034fb7f44bd58bb32009b8617b92").build();
         Log.d("[BusinessURI]:",""+builturi);
         return builturi;
     }
